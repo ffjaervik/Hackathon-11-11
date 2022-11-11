@@ -1,15 +1,11 @@
-import "./App.css";
-import CommentForm from "./CommentForm";
-import PostList from "./PostList";
+
+import logo from './logo.svg'
+import './App.css'
+import Layout from './components/Layout'
+
 function App() {
-  return (
-    <div className='App'>
-      <header className='App-header'>
-        <PostList />
-        <CommentForm />
-      </header>
-    </div>
-  );
+	return <Layout />
+
 }
 
-export default App;
+export default App
