@@ -1,5 +1,6 @@
 import React from "react";
 import Post from "./Post";
+
 import CommentModal from "./Modal";
 import "../assets/function.png";
 import "../assets/variable.png";
@@ -36,6 +37,7 @@ function PostList() {
       })}
     </ul>
   );
+
 }
 
 export default PostList;
