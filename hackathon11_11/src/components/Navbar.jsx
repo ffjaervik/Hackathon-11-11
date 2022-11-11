@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="bg-gray-800 h-12 w-screen ">
+    <div className="bg-gray-800 h-[5vh] w-screen ">
       <div className="relative float-right w-1/2 h-full flex items-center justify-between">
         <input
           className="bg-gray-800 text-white w-[30%] h-10 border border-white"
