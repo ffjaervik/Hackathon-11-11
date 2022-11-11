@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
 	return (
-		<div className='bg-gray-800 h-12 w-screen fixed '>
+		<div className='bg-gray-800 h-12 w-screen '>
 			<div className='relative float-right w-1/2 h-full flex items-center justify-between'>
         <input className='bg-gray-800 text-white w-[30%] h-10 border border-white' placeholder='Search' />
         <div className='h-14 w-14 mr-10 text-white'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">

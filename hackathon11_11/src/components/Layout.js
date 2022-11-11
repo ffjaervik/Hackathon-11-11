@@ -5,7 +5,6 @@ import Channels from './Channels'
 const Layout = () => {
 	return (
 		<>
-			<Navbar />
 			<Channels />
 		</>
 	)
