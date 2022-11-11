@@ -1,6 +1,6 @@
 import React from "react";
 import CommentModal from "./Modal";
-
+//
 function Post({ postText, postTitle, postFiles, onClick }) {
   return (
   <>
