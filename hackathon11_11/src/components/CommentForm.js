@@ -1,6 +1,7 @@
 import { useState } from "react";
 export default function CommentForm() {
-    const [post, setPost] = useState({ text: "", file: "", title: "" });
+
+    const [post, setPost] = useState({ text: "", file: [""], title: "" });
     function handleFileChange(event) {
         setPost({
             ...post,
@@ -61,6 +62,9 @@ export default function CommentForm() {
                     </button>
                 </div>
             </form>
+
         </div>
-    );
+      </form>
+    </div>
+  );
 }
