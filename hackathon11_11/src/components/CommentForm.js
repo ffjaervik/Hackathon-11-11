@@ -64,7 +64,6 @@ export default function CommentForm() {
             </form>
 
         </div>
-      </form>
-    </div>
+
   );
 }
