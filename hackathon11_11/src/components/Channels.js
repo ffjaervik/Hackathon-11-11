@@ -1,5 +1,6 @@
 import React from "react";
 import CommentModal from "./Modal";
+import CustomizedAccordions from "./Accordion";
 
 const Channels = () => {
   const handleClick = () => {
@@ -33,12 +34,13 @@ const Channels = () => {
 
         <br />
 
-        <ul>
+        <CustomizedAccordions/>
+        {/* <ul>
           <li>#Jobs</li>
           <li>#Interview Prep</li>
           <li>#JavaScript</li>
           <li>#CSS</li>
-        </ul>
+        </ul> */}
       </div>
     </div>
   );
