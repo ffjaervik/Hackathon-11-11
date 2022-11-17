@@ -1,11 +1,12 @@
 import { useState } from "react";
-export default function CommentForm() {
-
-    const [post, setPost] = useState({ text: "", file: [""], title: "" });
+export default function CommentForm({ posts,setPosts }) {
+    const [post, setPost] = useState({ text: "", files: [""], title: "" });
     function handleFileChange(event) {
         setPost({
             ...post,
-            file: URL.createObjectURL(event.target.files[0]),
+            files: [
+                /* ...post.file, */ URL.createObjectURL(event.target.files[0]),
+            ],
         });
         console.log(event.target.files[0]);
     }
@@ -13,8 +14,15 @@ export default function CommentForm() {
         e.preventDefault();
         let newPost = post;
         console.log({ newPost });
-        localStorage.setItem("posts", JSON.stringify(post));
+        // let oldLocalPosts = JSON.parse(localStorage.getItem("posts"));
+        // let oldPostsList = posts
+        let newLocalPosts = [...posts, newPost];
+        localStorage.setItem("posts", JSON.stringify(newLocalPosts));
+        setPosts(newLocalPosts);
     }
+    // useEffect(()=>{
+
+    // },[])
     return (
         <div className="border-solid border-2 border-sky-500 bg-slate-900 p-8">
             <form className="w-full">
@@ -62,8 +70,6 @@ export default function CommentForm() {
                     </button>
                 </div>
             </form>
-
         </div>
-
-  );
+    );
 }
