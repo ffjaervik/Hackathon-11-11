@@ -1,14 +1,9 @@
-// import { useEffect } from "react";
 import Post from "./Post";
 
-// import CommentModal from "./Modal";
 import "../assets/function.png";
 import "../assets/variable.png";
 
-function PostList({posts}) {
-
-    // useEffect(()=>{})
-
+function PostList({ posts }) {
     return (
         <ul className="todo-list">
             {posts.map(function (item, index) {
@@ -22,7 +17,6 @@ function PostList({posts}) {
                         />
                     </>
                 );
-                /* onClick={onClick} */
             })}
         </ul>
     );

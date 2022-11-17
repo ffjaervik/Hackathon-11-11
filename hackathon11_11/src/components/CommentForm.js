@@ -1,28 +1,22 @@
 import { useState } from "react";
-export default function CommentForm({ posts,setPosts }) {
+export default function CommentForm({ posts, setPosts }) {
     const [post, setPost] = useState({ text: "", files: [""], title: "" });
     function handleFileChange(event) {
         setPost({
             ...post,
-            files: [
-                /* ...post.file, */ URL.createObjectURL(event.target.files[0]),
-            ],
+            files: [...post.files, URL.createObjectURL(event.target.files[0])],
         });
         console.log(event.target.files[0]);
     }
     function handleSubmit(e) {
         e.preventDefault();
         let newPost = post;
-        console.log({ newPost });
-        // let oldLocalPosts = JSON.parse(localStorage.getItem("posts"));
-        // let oldPostsList = posts
+        console.log("Post to be added:", newPost);
         let newLocalPosts = [...posts, newPost];
         localStorage.setItem("posts", JSON.stringify(newLocalPosts));
         setPosts(newLocalPosts);
     }
-    // useEffect(()=>{
 
-    // },[])
     return (
         <div className="border-solid border-2 border-sky-500 bg-slate-900 p-8">
             <form className="w-full">
