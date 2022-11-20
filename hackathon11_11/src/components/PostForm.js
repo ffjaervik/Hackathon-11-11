@@ -1,6 +1,6 @@
 import { useState } from "react";
 export default function PostForm({ posts, setPosts }) {
-    const [post, setPost] = useState({ text: "", files: [], title: "" });
+    const [post, setPost] = useState({ text: "", files: [], title: "", comments:[]});
     function handleFileChange(event) {
         setPost({
             ...post,

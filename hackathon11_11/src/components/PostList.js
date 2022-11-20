@@ -14,6 +14,7 @@ function PostList({ posts }) {
                             postText={item.text}
                             postTitle={item.title}
                             postFiles={item.files}
+                            postComments={item.comments}
                         />
                     </>
                 );

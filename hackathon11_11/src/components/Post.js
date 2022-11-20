@@ -1,7 +1,8 @@
-import React from "react";
+import {useState} from "react";
 import CommentModal from "./Modal";
 
-function Post({ postText, postTitle, postFiles }) {
+function Post({ postText, postTitle, postFiles,postComments }) {
+    const [comments,setComments]=useState(postComments)
     return (
         <>
             <div className="p-5 bg-gray-300">
@@ -25,7 +26,7 @@ function Post({ postText, postTitle, postFiles }) {
                     );
                 })}
 
-                <CommentModal />
+                <CommentModal comments={comments} setComments={setComments}/>
             </div>
             <br />
         </>

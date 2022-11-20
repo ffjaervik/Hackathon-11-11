@@ -20,10 +20,11 @@ const style = {
   p: 4,
 };
 
-function CommentModal() {
+function CommentModal({comments,setComments}) {
    const [open, setOpen] = useState(false);
      const handleOpen = () => setOpen(true);
      const handleClose = () => setOpen(false);
+    let handleSubmit = (e) => {console.log("Submitted with value:",e.target.value)}
   return (
     <>
       <Button onClick={handleOpen}>View Comment</Button>
@@ -37,13 +38,17 @@ function CommentModal() {
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Currently 0 comments
           </Typography>
+    <form onSubmit={(e)=>{handleSubmit(e)}}>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             <textarea
               placeholder="Leave a Comment..."
               className="p-4"
+              
+              onChange={(e)=>{console.log(e.target.value)}}
             ></textarea>
           </Typography>
-          <Button>Submit</Button>
+          <Button type="submit">Submit</Button>
+</form>
         </Box>
       </Modal>
     </>
