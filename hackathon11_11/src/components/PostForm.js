@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function CommentForm({ posts, setPosts }) {
+export default function PostForm({ posts, setPosts }) {
     const [post, setPost] = useState({ text: "", files: [], title: "" });
     function handleFileChange(event) {
         setPost({

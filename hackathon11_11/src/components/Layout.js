@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import Channels from "./Channels";
-import CommentForm from "./CommentForm";
+import PostForm from "./PostForm";
 import PostList from "./PostList";
 
 const Layout = ({ posts, setPosts }) => {
@@ -14,7 +14,7 @@ const Layout = ({ posts, setPosts }) => {
                 <div className="flex flex-col w-full justify-between">
                     <PostList posts={posts} />
 
-                    <CommentForm posts={posts} setPosts={setPosts} />
+                    <PostForm posts={posts} setPosts={setPosts} />
                 </div>
             </main>
         </>
